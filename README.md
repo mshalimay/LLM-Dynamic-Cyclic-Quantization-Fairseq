@@ -53,7 +53,7 @@ The following files were modified/included in `fairseq` for quantization:
 - `experiment3.bash`:
     - replicate results from experiment 2.
 
-# Quantization implementation
+# Dynamic Quantization implementation
 Dynamic Quantization is implemented as follows:
 - Each layer to be quantized is wrapped with a `QuantizedLayer` `nn.module` (see `quantize.py`).
 - This wrapper alters the forward method of the original layer to potentially use quantized inputs, weights and quantized outputs.
@@ -62,7 +62,7 @@ Dynamic Quantization is implemented as follows:
 	- 1) Compute averages during training and use these averages for quantization during training (`dynamic_qparams` = True)
 	- 2)  Compute qparams based on current input/weight only (`dynamic_qparams`=True)
 
-# CPT implementation
+# Cyclic Precision Training implementation
 - For cyclic-precision quantization, I follow [[1]](#references), and use a `cosine` scheduler for cycling between number of bits in quantization.
 
 CPT is realized via:
