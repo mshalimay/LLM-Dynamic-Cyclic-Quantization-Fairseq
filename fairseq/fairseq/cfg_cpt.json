@@ -1,0 +1,7 @@
+{
+    "wbit_min": 4,
+    "wbit_max": 16,
+    "inbit_min": 16,
+    "inbit_max": 16,
+    "num_cyclic_period": 64
+  }
