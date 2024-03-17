@@ -50,7 +50,7 @@ The table below shows the results. The column `full` shows the accuracies on the
 		- the `MultiHeadAttention` layers (right), we can recover 0.37 in accuracy
 	- For the 8-bit case, the delta is pretty close to zero. That aligns with the fact that the fully quantized have virtually the same performance to the full precision
 
-![Alt text](<Pasted image 20240305223308.png>)
+![Alt text](<imgs/Pasted image 20240305223308.png>)
 
 # Experiment 2: Training-aware cyclic quantization
 - In this experiment, Roberta base model is finetuned for GLUE tasks as follows:
@@ -75,7 +75,7 @@ The table below shows the accuracies for selected GLUE tasks in the 5 variations
 - We observe a better accuracy for the cyclic case using broader ranges. This potentially illustrates [[1]](#references) observation that cyclic precision allows for a better search in optimization space.
 - However, it is worth mentioning the average gains relative to not cyclic are limited.  I believe this might be due to the usage of already finetuned configurations provided by `fairseq`.
 
-![Alt text](<Pasted image 20240305192135.png>)
+![Alt text](<imgs/Pasted image 20240305192135.png>)
 
 # Limitations/Issues
 - Due to computing resource limitations, for _Experiment 2_ I limited the number of training epochs to 5 and the number of datasets.
