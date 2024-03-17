@@ -41,16 +41,17 @@ The following files were modified/included in `fairseq` for quantization:
 - `fairseq/fairseq_cli/train.py`: 
     - modified to compute total number of iterations and compute parameters for cyclic precision scheduler
 
-- `download_glue.py`: donwload GLUE data for finetuning
+- `config/finetuning`: hyperparameter specification for `Roberta` finetuning for GLUE tasks.
+
+Other files:
+- `download_glue.py`: download GLUE data for finetuning
 
 - `evaluate.py`: Performs infernce on GLUE tasks given a finetuned model 
-
 
 - `experiment1.bash`: 
     - replicate results from experiment 1.
 
-
-- `experiment3.bash`:
+- `experiment2.bash`:
     - replicate results from experiment 2.
 
 # Dynamic Quantization implementation
